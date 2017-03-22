@@ -2,12 +2,12 @@
 
     if (array_key_exists('email', $_POST) OR array_key_exists('password', $_POST)) {
 
-        $link = mysqli_connect("localhost", "cl29-users-bzh", "YTTMcfhK.", "cl29-users-bzh");
+        $link = mysqli_connect("server", "database name", "password", "database username");
 
             if (mysqli_connect_error()) {
 
                 die ("There was an error connecting to the database");
-
+                
             }
 
 
@@ -47,7 +47,6 @@
 
         }
 
-
     }
 
 
@@ -69,7 +68,7 @@
 <?php
 
     // Assign a variable to database connection
-    $link = mysqli_connect('shareddb1a.hosting.stackcp.net', 'users-1-34e0e9', 'kazfSDyCOqBQ', 'users-1-34e0e9');
+    $link = mysqli_connect("server", "database name", "password", "database username");
 
     if (mysqli_connect_error()) {
         die ("Unable to connect to database.");
